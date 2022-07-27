@@ -8,9 +8,12 @@
 
         <v-spacer v-if="!isMobile"></v-spacer>
         <div class="content-nav-bar">
-          <router-link :to="'/'" class="routes-nav-bar">Experience</router-link>
-          <router-link :to="'/'" class="routes-nav-bar">Articles</router-link>
-          <router-link :to="'/'" class="routes-nav-bar">Contact</router-link>
+          <router-link :to="'/experience'" class="routes-nav-bar"
+            >Experience</router-link
+          >
+          <router-link :to="'/articles'" class="routes-nav-bar"
+            >Articles</router-link
+          >
           <router-link :to="'/'" class="routes-nav-bar">About</router-link>
         </div>
       </v-flex>
@@ -34,7 +37,11 @@
       >
       </vue-particles>
 
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <transition name="slide-left">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </v-main>
   </v-app>
 </template>
@@ -61,7 +68,7 @@ export default {
 }
 
 .routes-nav-bar {
-  font-size: 20px;
+  font-size: 18px;
   color: #ffffff;
   text-decoration: none;
   padding: 8px;
@@ -85,6 +92,10 @@ export default {
 
 .main-div {
   z-index: 999;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  overflow: auto;
 }
 .particles {
   position: absolute;
@@ -99,10 +110,11 @@ export default {
 .container {
   z-index: 999;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%) !important;
+  padding-top: 50px;
 }
 
 .cabecalho {

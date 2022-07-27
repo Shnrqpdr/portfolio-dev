@@ -90,8 +90,8 @@ export default {
   width: 100%;
 
   .avatar-img {
-    width: 360px !important;
-    height: 300px !important;
+    width: 300px !important;
+    height: 240px !important;
   }
 }
 
