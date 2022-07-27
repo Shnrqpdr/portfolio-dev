@@ -202,13 +202,17 @@ export default {
       },
     ];
   },
+  computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.xs;
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 .itens-div {
   position: absolute;
   width: 100%;
-  padding-right: 20px;
 }
 
 .container-principal {
@@ -236,5 +240,9 @@ export default {
 
 .v-expansion-panel {
   margin-bottom: 20px;
+}
+
+.v-list-item__subtitle {
+  -webkit-line-clamp: 50 !important;
 }
 </style>
