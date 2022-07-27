@@ -104,7 +104,7 @@ export default {
           {
             titulo: "Quantum Mechanics",
             descricao:
-              "Strong knowledge of quantum mechanics theory. Actually working on non-relativistical scattering theory.",
+              "Strong knowledge of quantum mechanics theory. Currently working on non-relativistical scattering theory.",
             icone: "mdi-electron-framework",
           },
           {
@@ -140,7 +140,7 @@ export default {
           {
             titulo: "Python",
             descricao:
-              "Great experience using libraries for explore, analyse and treating data. Actually working with scientific programming in Python",
+              "Great experience using libraries for explore, analyse and treating data. Currently working with scientific programming in Python",
             icone: "mdi-language-python",
           },
           {
