@@ -14,7 +14,7 @@
         },
       }"
     >
-      <v-flex class="itens-div"
+      <!-- <v-flex class="itens-div"
         ><div
           style="
             display: flex;
@@ -25,7 +25,29 @@
         >
           Comming soon!
         </div></v-flex
-      >
+      > -->
+      <v-row class="itens-div">
+        <v-col cols="12" sm="6">
+          <v-card width="100%">
+            <v-img
+              class="white--text align-end"
+              height="200px"
+              src="https://imagizer.imageshack.com/img922/2470/5lB4su.jpg"
+            >
+              <v-card-title
+                >How to add custom events in Vue 3 using
+                TypeScript</v-card-title
+              >
+            </v-img>
+
+            <v-card-actions>
+              <v-btn color="orange" text> Share </v-btn>
+
+              <v-btn color="orange" text> Explore </v-btn>
+            </v-card-actions>
+          </v-card></v-col
+        >
+      </v-row>
     </div>
   </v-container>
 </template>
@@ -48,6 +70,11 @@ export default {
   width: 100%;
   padding-right: 20px;
   height: 100%;
+
+  @media screen and (max-width: 600px) {
+    padding-right: 0px;
+    padding-left: 20px;
+  }
 }
 
 .container-principal {
