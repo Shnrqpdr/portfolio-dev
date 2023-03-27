@@ -28,7 +28,14 @@
       > -->
       <v-row class="itens-div">
         <v-col cols="12" sm="6">
-          <v-card width="100%">
+          <v-card
+            width="100%"
+            @click="
+              redirect(
+                'https://dev.to/hnrqpdr/how-to-add-custom-events-in-vue-3-using-typescript-5931'
+              )
+            "
+          >
             <v-img
               class="white--text align-end"
               height="200px"
@@ -39,12 +46,6 @@
                 TypeScript</v-card-title
               >
             </v-img>
-
-            <v-card-actions>
-              <v-btn color="orange" text> Share </v-btn>
-
-              <v-btn color="orange" text> Explore </v-btn>
-            </v-card-actions>
           </v-card></v-col
         >
       </v-row>
@@ -62,6 +63,11 @@ export default {
   },
 
   mounted() {},
+  methods: {
+    redirect(url) {
+      window.location.href = url;
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
